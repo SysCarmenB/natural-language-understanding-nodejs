@@ -12,6 +12,7 @@ import Concept from './Concept.jsx';
 import Syntax from './Syntax.jsx';
 import SemanticRoles from './SemanticRoles.jsx';
 import { MAX_CONTENT_WIDTH } from '../utils/variables';
+import Relations from './Relations.jsx';
 
 const languages = lang();
 
@@ -49,13 +50,13 @@ function Output(props) {
                 query={query}
               />
             </Pane>
-            <Pane label="Emotion">
+            {/*<Pane label="Emotion">
               <Emotion
                 data={data.results.emotion}
                 language={languages.getLanguageName(language)}
                 query={query}
               />
-            </Pane>
+            </Pane>*/}          
             <Pane label="Keywords">
               <Keywords
                 data={data.results.keywords}
@@ -67,7 +68,7 @@ function Output(props) {
                 data={data.results.entities}
                 language={languages.getLanguageName(language)}
               />
-            </Pane>
+            </Pane>            
             <Pane label="Categories">
               <Categories
                 data={data.results.categories}

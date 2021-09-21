@@ -47,7 +47,7 @@ app.post('/api/analyze', (req, res, next) => {
     nlu.analyze(req.body, (err, results) => {
       if (err) {
         return next(err);
-      }
+      }     
       return res.json({ query: req.body.query, results: results.result });
     });
   }
