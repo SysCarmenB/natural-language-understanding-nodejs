@@ -3,12 +3,17 @@ import fetch from 'isomorphic-fetch';
 const FEATURES = {
   features: {
     concepts: {},
-    entities: {},
+    entities: {      
+      model: "33113475-4340-4835-8252-d82c4e16da10"
+    },
     keywords: {},
     categories: {},
     emotion: {},
     sentiment: {},
     semantic_roles: {},
+    relations: {
+      model: "33113475-4340-4835-8252-d82c4e16da10"
+    },
     syntax: {
       tokens: {
         lemma: true,

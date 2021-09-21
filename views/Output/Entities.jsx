@@ -63,6 +63,7 @@ export default React.createClass({
       text: PropTypes.string,
       type: PropTypes.string,
       relevance: PropTypes.number,
+      confidence: PropTypes.number
     })),
     language: PropTypes.string,
   },
@@ -106,7 +107,7 @@ export default React.createClass({
                 data={this.props.data.reduce((acc, item) => {
                   acc.push({ Name: item.text,
                     Type: item.type,
-                    Score: <Bar score={item.relevance} /> });
+                    Score: <Bar score={item.confidence} /> });
                   return acc;
                 }, []).filter((val, i) => i <= this.state.visibleItems)}
               />
